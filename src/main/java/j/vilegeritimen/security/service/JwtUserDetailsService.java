@@ -1,6 +1,5 @@
-package j.security.service;
+package j.vilegeritimen.security.service;
 
-import j.security.service.IUserService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -24,7 +23,7 @@ public class JwtUserDetailsService implements UserDetailsService {
         // Herefter opretter man et nyt userdetails.User objekt med usr/pw fra databasen.
         // Spring Security vil herefter bruge bcrypt.compare() til at sammenligne clear-text pw fra
         // login-formular med datbasens bcrypt af pw. Hvis svaret er true, er brugeren godkendt.
-        List<j.security.model.User> users = userService.findByName(username);
+        List<j.vilegeritimen.security.model.User> users = userService.findByName(username);
         System.out.println("users from database: length: " + users.size());
         if(users.size()==1) {
             System.out.println("found the user in Database: " + users.get(0).getUsername());

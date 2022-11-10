@@ -1,6 +1,6 @@
-package j.security.repository;
+package j.vilegeritimen.security.repository;
 
-import j.security.model.User;
+import j.vilegeritimen.security.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

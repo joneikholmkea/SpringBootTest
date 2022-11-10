@@ -1,11 +1,11 @@
-package j.security.controller;
+package j.vilegeritimen.security.controller;
 
-import j.security.service.JwtUserDetailsService;
-import j.security.JwtTokenManager;
-import j.security.model.JwtRequestModel;
-import j.security.model.JwtResponseModel;
-import j.security.model.User;
-import j.security.service.IUserService;
+import j.vilegeritimen.security.JwtTokenManager;
+import j.vilegeritimen.security.model.JwtRequestModel;
+import j.vilegeritimen.security.model.JwtResponseModel;
+import j.vilegeritimen.security.model.User;
+import j.vilegeritimen.security.service.IUserService;
+import j.vilegeritimen.security.service.JwtUserDetailsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

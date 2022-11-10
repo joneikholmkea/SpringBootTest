@@ -1,7 +1,7 @@
-package j.security;
+package j.vilegeritimen.security;
 
 import io.jsonwebtoken.ExpiredJwtException;
-import j.security.service.JwtUserDetailsService;
+import j.vilegeritimen.security.service.JwtUserDetailsService;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

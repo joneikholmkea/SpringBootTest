@@ -1,8 +1,9 @@
-package j.security.service;
+package j.vilegeritimen.security.service;
 
-import j.security.config.SecurityConfiguration;
-import j.security.model.User;
-import j.security.repository.UserRepository;
+
+import j.vilegeritimen.security.config.SecurityConfiguration;
+import j.vilegeritimen.security.model.User;
+import j.vilegeritimen.security.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+
 
 @AllArgsConstructor
 @Service
@@ -30,7 +32,9 @@ public class UserService implements IUserService{
             PasswordEncoder pw = SecurityConfiguration.passwordEncoder();
             user.setPassword(pw.encode(user.getPassword()));
 //        }
-        return userRepository.save(user);
+        User user1 = userRepository.save(user);
+        System.out.println("save kaldet med " + user.getUsername() + " svar er:  " + user1.getUsername());
+        return user1;
     }
 
     @Override

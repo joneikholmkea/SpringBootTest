@@ -1,7 +1,8 @@
-package j.security.config;
+package j.vilegeritimen.security.config;
 
-import j.security.JwtAuthenticationEntryPoint;
-import j.security.JwtFilter;
+
+import j.vilegeritimen.security.JwtAuthenticationEntryPoint;
+import j.vilegeritimen.security.JwtFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,7 +37,7 @@ public class SecurityConfiguration implements WebMvcConfigurer {
         http.cors().and().csrf().disable()  // was cors().and() after http
                 // to implement CSRF token https://www.javainuse.com/spring/boot_security_csrf
                 // "antMathcers" comes from Apache Ant build system.
-        .authorizeRequests().antMatchers("/login", "/signup").permitAll()
+        .authorizeRequests().antMatchers("/login", "/signup", "/sjov").permitAll()
         .anyRequest().authenticated()
         .and()
         .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint)

@@ -1,4 +1,4 @@
-package j.security;
+package j.vilegeritimen.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

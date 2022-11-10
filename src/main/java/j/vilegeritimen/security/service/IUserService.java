@@ -1,6 +1,6 @@
-package j.security.service;
+package j.vilegeritimen.security.service;
 
-import j.security.model.User;
+import j.vilegeritimen.security.model.User;
 
 import java.util.List;
 

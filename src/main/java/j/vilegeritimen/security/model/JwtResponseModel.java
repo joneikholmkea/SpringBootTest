@@ -1,4 +1,4 @@
-package j.security.model;
+package j.vilegeritimen.security.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
