@@ -22,6 +22,13 @@ public class JwtTokenManager {
                 .setExpiration(new Date(System.currentTimeMillis() + TOKEN_VALIDITY ))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
     }
+
+    /**
+     * Default constructor
+     * @param userDetails
+     * @param token
+     *
+     */
     public Boolean validateJwtToken(String token, UserDetails userDetails) {
         System.out.println("TokenManager validateJwtToken(String token, UserDetails) With token: Call: B");
         String username = getUsernameFromToken(token);
