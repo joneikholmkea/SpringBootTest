@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -29,7 +28,7 @@ public class LegeKontroller {
     }
 
     @PostMapping("/addUser")
-    public ResponseEntity<Map<String,String>> addUser(@RequestBody User user){
+    public ResponseEntity<Map<String,String>> addUser(User user){
         Map<String,String> map = new HashMap<>();
         map.put("message", "du kan godt");
         if(user.getUsername().length()>0) {
