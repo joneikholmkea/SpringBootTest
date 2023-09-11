@@ -27,4 +27,9 @@ public class ServiceLayerTest {
         Assertions.assertNotNull(savedUser);
         Assertions.assertEquals("ole123", savedUser.getUsername());
     }
+
+    @Test
+    public void myTest(){
+        Assertions.assertNull(null);
+    }
 }
